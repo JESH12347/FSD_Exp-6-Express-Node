@@ -54,4 +54,10 @@ app.post("/api/rain-tomorrow", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on ${PORT}`));
+app
+  .listen(PORT, () => {
+    console.log(`Server is definitely running on port ${PORT}`);
+  })
+  .on("error", (err) => {
+    console.error("Server failed to start:", err);
+  });
