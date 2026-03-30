@@ -43,27 +43,19 @@ Server runs at → **http://localhost:3000**
 
 ---
 
-## 🧪 Testing with curl
+## OUTPUT
 
-### Get all students
+### Get all students (GET    | /students     | Get all students )
 
-```bash
-curl http://localhost:3000/students
-```
+![alt text](image.png)
 
-### Get student with ID 1
+### Get student with ID 1 (GET    | /students/:id | Get one student by ID)
 
-```bash
-curl http://localhost:3000/students/1
-```
+![alt text](image-1.png)
 
-### Add a new student
+### Add a new student ( POST   | /students     | Add a new student )
 
-```bash
-curl -X POST http://localhost:3000/students \
-  -H "Content-Type: application/json" \
-  -d '{"name": "Sneha Patil", "branch": "IT", "year": 2}'
-```
+
 
 ### Update a student (only send fields you want to change)
 
@@ -89,12 +81,4 @@ curl -X DELETE http://localhost:3000/students/2
 | morgan  | Logs each HTTP request in terminal   |
 | nodemon | Auto-restarts server on file changes |
 
-## OUTPUT
 
-GET | /students | Get all students
-![alt text](image.png)
-
-| GET | /students/:id | Get one student by ID
-![alt text](image-1.png)
-
-POST | /students | Add a new student
